@@ -76,24 +76,27 @@ public class Paixu {
 
 		fileWriter1.write("----------≈≈–Ú«∞----------"+"\r\n");
 		for (int i = 0; i < 100; i++) {
-			int ran1 = ran.nextInt();
+			int ran1 = ran.nextInt(1000)-500;
 			num1[i] = ran1;
-			fileWriter1.write(i+":      "+ran1+""+"\r\n");
+			fileWriter1.write(i+1+":   "+ran1+""+"\r\n");
 		}
 		fileWriter1.flush();
 		fileWriter1.close();
-		
-		QuickSort(num1,0,num1.length-1);
 		FileWriter fileWriter2 = new FileWriter("C:/Users/60215/Desktop/num2.txt");
 		fileWriter2.write("----------≈≈–Ú∫Û£®…˝√›£©----------"+"\r\n");
+		
+		QuickSort(num1,0,num1.length-1);
+		
+
 		for (int i = 0; i < num1.length; i++) {
-			fileWriter2.write(i+":      "+num1[i]+""+"\r\n");
+			fileWriter2.write(i+1+":   "+num1[i]+""+"\r\n");
 		}
+		
 		QuickSort("Ωµ√›",num1,0,num1.length-1);
 
 		fileWriter2.write("----------≈≈–Ú∫Û£®Ωµ√›£©----------"+"\r\n");
 		for (int i = 0; i < num1.length; i++) {
-			fileWriter2.write(i+":      "+num1[i]+""+"\r\n");
+			fileWriter2.write(i+1+":   "+num1[i]+""+"\r\n");
 		}
 		
 		fileWriter2.flush();

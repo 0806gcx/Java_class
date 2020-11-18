@@ -3,6 +3,7 @@ package class2_2;
 import java.util.Scanner;
 
 public class master {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		people people1 = new people();
 		Scanner scanner = new Scanner(System.in);

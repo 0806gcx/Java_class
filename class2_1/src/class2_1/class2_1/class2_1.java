@@ -3,6 +3,7 @@ package class2_1;
 import java.util.Scanner;
 
 public class class2_1 {
+	@SuppressWarnings("resource")
 	public static void main(String[] args)
 	{
 		circle circle1 = new circle();
