@@ -4,14 +4,25 @@
 
 ![image](https://github.com/0806gcx/Java_class/blob/master/cry.gif)
 
+
 class0:
 1、搭建好JAVA的开发环境，并运行“hello word”。
+
+
 2、在键盘上输入一元二次方程的a,b,c，并求解x1,x2。
+
+
     ax²+bx+c=0
+
+
 3、能够进行判断方程是否有解，有几个解的功能。
+
+
 
 class1:
 1、从键盘输入3个浮点数作为三角形三边的边长，试计算三角形的面积。
+
+
 2、编程序，显示螺旋方阵。
 1	2	3	4
 12	13	14	5
