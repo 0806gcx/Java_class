@@ -1,4 +1,4 @@
-package class4;
+package class4.src.class4;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,23 +19,7 @@ public class class4 {
     }
 	
 	public static void main(String[] args) {
-		Scanner input=new Scanner(System.in);
-		System.out.println("输入名字");
-		String []text=new String[1024];
-		int i=0;
-		//输入数据
-		text[i]=input.nextLine();
-		for(int j=0;j<=i;j++){
-			if(text[j]==null||"".equals(text[j])){
-				System.out.println("结束输入");
-				break;
-			}else{
-				System.out.println("输入下一个");
-				text[i+1]=input.nextLine();
-				i++;
-			}
-		}
-		input.close();
+		
 		//创建文档，保存数据
 		try {
 	        File file1=new File("C:/Users/60215/Desktop/en.txt");
@@ -48,21 +32,26 @@ public class class4 {
 		    }
 		    BufferedWriter bWriter1=new BufferedWriter(new FileWriter(file1.getAbsoluteFile()));
 		    BufferedWriter bWriter2=new BufferedWriter(new FileWriter(file2.getAbsoluteFile()));
-		    for(int j=0;j<i;j++){
-	            if (checkcountname(text[j]))
-	            {
-	            	bWriter2.write(text[j]+"\n");
-	            }
-	            else
-	            {
-	            	bWriter1.write(text[j]+"\n");
-	            }
-		    }
+		    Scanner input=new Scanner(System.in);
+			System.out.println("输入名字");
+			String text=new String();
+			int i=0;
+			//输入数据
+			do{
+				text=input.nextLine();
+				 if (checkcountname(text)){
+		            	bWriter2.write(text+"\n");
+		            }
+		         else{
+		            	bWriter1.write(text+"\n");
+		            }
+			}while(text.length()!=0);
+			System.out.println("输入结束");
+			input.close();
 		    bWriter1.close();
 		    bWriter2.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-
 }
